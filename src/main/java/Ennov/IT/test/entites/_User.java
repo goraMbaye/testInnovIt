@@ -1,6 +1,7 @@
 package Ennov.IT.test.entites;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +16,7 @@ public class _User {
     private Long id;
     private String username;
     private String email;
-   /* @OneToMany
-    @JoinColumn(name = "user_id")
-    private List<Ticket> tickets;*/
+    @OneToMany(mappedBy = "user")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private List<Ticket> tickets;
 }

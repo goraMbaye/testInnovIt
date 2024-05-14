@@ -1,5 +1,4 @@
 package Ennov.IT.test.service.impl;
-
 import Ennov.IT.test.entites._User;
 import Ennov.IT.test.exeption.UserNotFoundException;
 import Ennov.IT.test.repository.UserRepository;
@@ -188,6 +187,4 @@ public class UserServiceImplTest {
 
 
 }
-
-
 
