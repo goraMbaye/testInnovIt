@@ -144,7 +144,7 @@ public class UserServiceImplTest {
                 .email("gora.mbaye@gmail.com")
                 .build();
 
-        // Simuler le comportement du repository pour indiquer que l'utilisateur n'existe pas
+
         when(userRepository.existsById(userId)).thenReturn(false);
 
         // Appel de la méthode à tester
@@ -153,7 +153,7 @@ public class UserServiceImplTest {
             // Si la méthode ne lance pas d'exception, le test échoue
             fail("Une exception aurait dû être lancée");
         } catch (Exception ex) {
-            // Vérifier que l'exception lancée est celle attendue
+
             assertThat(ex).isInstanceOf(UserNotFoundException.class);
         }
 
